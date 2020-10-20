@@ -1,0 +1,27 @@
+package com.wellsfargo.fsd.cms.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.wellsfargo.fsd.cms.dao.CMSUserRepo;
+
+public class UserDetailsServiceImpl implements UserDetails{
+	
+	@Autowired
+	private PasswordEncoder pEnc;
+	
+	@Autowired
+	private CMSUserRepo userRepo;
+	
+	public  UserDetails loadUserDetails(String name) {
+		
+		UserDetails userDetails;
+		
+		CMSUserRepo user=userRepo.findByUserName(userName);
+		return null;
+		
+	}
+	
+
+}

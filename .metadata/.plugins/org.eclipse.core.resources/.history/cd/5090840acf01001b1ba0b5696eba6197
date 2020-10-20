@@ -1,0 +1,20 @@
+package com.wellsfargo.fsd.swbd.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.wellsfargo.fsd.swbd.service.ItemService;
+
+@Controller
+public class ItemController {
+	
+	private ItemService itemService;
+	
+	public String showItemForm() {
+		
+		return "item-form-page";
+		
+	}
+	
+	
+
+}

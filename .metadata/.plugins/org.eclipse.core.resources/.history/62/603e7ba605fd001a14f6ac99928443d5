@@ -1,0 +1,137 @@
+package com.wellsfargo.jpahd.entity;
+
+import java.io.Serializable;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="emps")
+
+public class Employee implements Serializable, Comparable {
+	
+	@Id
+	@Column(name="eno")
+	private Long empNo;
+	
+	@Column(name="fnm",nullable=false)
+	private String firstName;
+	
+	@Column(name="lnm",nullable=false)
+	private String lastName;
+	
+
+	@Column(name="basic",nullable=false)
+	private Double basic;
+	
+
+	@Column(name="doj",nullable=false)
+	private LocalDate joinDate;
+	
+	@Embedded
+	private Address address;
+	
+	
+	public  Employee() {
+	
+		}
+
+
+	public Employee(Long empNo, String firstName, String lastName, Double basic, LocalDate joinDate, Address address) {
+		super();
+		this.empNo = empNo;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.basic = basic;
+		this.joinDate = joinDate;
+		this.address = address;
+	}
+
+
+	public Long getEmpNo() {
+		return empNo;
+	}
+
+
+	public void setEmpNo(Long empNo) {
+		this.empNo = empNo;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public Double getBasic() {
+		return basic;
+	}
+
+
+	public void setBasic(Double basic) {
+		this.basic = basic;
+	}
+
+
+	public LocalDate getJoinDate() {
+		return joinDate;
+	}
+
+
+	public void setJoinDate(LocalDate joinDate) {
+		this.joinDate = joinDate;
+	}
+
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+	public int compareTo(Address o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+
+}

@@ -1,0 +1,27 @@
+package com.wellsfargo.fsd.td.testing;
+
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+import com.wellsfargo.fsd.td.service.NumericOperations;
+
+public class NumericOperationTest {
+	
+	@Test
+	void isOddTest() {
+		NumericOperations numOpt=new NumericOperations();
+		
+		assertTrue(numOpt.isOdd(3));
+		assertTrue(numOpt.isOdd(7));
+		assertTrue(numOpt.isOdd(9));
+		
+		assertFalse(numOpt.isOdd(4));
+		assertFalse(numOpt.isOdd(6));
+	}
+
+	
+
+}

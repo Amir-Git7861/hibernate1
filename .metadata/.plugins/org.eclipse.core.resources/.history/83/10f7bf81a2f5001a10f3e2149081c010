@@ -1,0 +1,41 @@
+package com.wellsfargo.fsd.cms.service;
+
+import java.util.List;
+
+import com.wellsfargo.fsd.cms.dao.ContactDao;
+import com.wellsfargo.fsd.cms.entity.Contact;
+import com.wellsfargo.fsd.cms.exception.ContactException;
+
+public class ContactserviceImpl implements ContactDao {
+
+	@Override
+	public Contact add(Contact contact) throws ContactException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Contact save(Contact contact) throws ContactException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteById(int contactId) throws ContactException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Contact getById(int contactId) throws ContactException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Contact> getAll() throws ContactException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

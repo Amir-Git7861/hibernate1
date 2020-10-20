@@ -1,0 +1,43 @@
+package com.wellsfargo.fsd.cms.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wellsfargo.fsd.cms.dao.ContactRepositry;
+import com.wellsfargo.fsd.cms.entity.Contact;
+import com.wellsfargo.fsd.cms.exception.ContactException;
+
+
+
+@Service
+public class ContactService1 {
+	
+	@Autowired
+	private ContactRepositry repo;
+	
+	public List<Contact> listAll(String keyword) {
+		if (keyword != null) {
+			return repo.search(keyword);
+		}
+		return repo.findAll();
+	}
+	
+	public void save(Contact product) {
+		repo.save(product);
+	}
+	
+	public Contact get(Integer id) {
+		return repo.findById(id).get();
+	}
+	
+	public void delete(Integer id) {
+		repo.deleteById(id);
+	}
+	
+}
+
+

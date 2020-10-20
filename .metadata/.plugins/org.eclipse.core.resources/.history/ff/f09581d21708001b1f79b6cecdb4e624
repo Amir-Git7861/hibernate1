@@ -1,0 +1,28 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
+
+<html>
+<head>
+<base href="/" />
+</head>
+	<body>
+		<h2>Log In</h2>
+		<jsp:include page="${pageContext.request.contextPath }/header"/>
+		
+		<nav>
+			<form action="${pageContext.request.contextPath }/login" method="POST">
+				<c:if >
+			
+			
+			
+			</form>
+		
+		
+		
+		</nav>
+	
+	
+	</body>
+
+
+</html>

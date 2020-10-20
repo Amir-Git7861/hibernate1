@@ -1,0 +1,18 @@
+package com.wellsfargo.fsd.swbd.service;
+
+import java.time.LocalDateTime;
+
+public class GreetServiceImpl implements GreetService {
+
+	@Override
+	public String greet(String userName) {
+		
+		String greeting=null;
+		
+		int h=LocalDateTime.now().getHour();
+		
+		
+		return greeting;
+	}
+
+}

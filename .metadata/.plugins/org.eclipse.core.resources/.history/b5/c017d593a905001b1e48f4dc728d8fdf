@@ -1,0 +1,12 @@
+package com.wellsfargo.fsd.cms.test;
+
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.wellsfargo.fsd.cms.dao.ContactRepositry;
+
+@DataJpaTest
+public class ContactDaoTest {
+	
+	private ContactRepositry contactRepo;
+
+}

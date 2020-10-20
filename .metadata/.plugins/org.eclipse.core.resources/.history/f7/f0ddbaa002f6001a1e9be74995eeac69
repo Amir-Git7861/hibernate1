@@ -1,0 +1,15 @@
+package com.wellsfargo.fsd.td.service;
+
+public class NumericOperations {
+	
+	public boolean isOdd(int number) {
+		return number%2==1 || number%2==-1;
+		
+	}
+	
+	public int max(int n1,int n2) {
+		return n1>=n2?n1:n2;
+		
+	}
+
+}

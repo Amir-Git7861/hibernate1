@@ -1,0 +1,4 @@
+<bean id="gsb" class="com.wellsfargo.scd.service.GreetServiceImpl">
+
+
+</bean>

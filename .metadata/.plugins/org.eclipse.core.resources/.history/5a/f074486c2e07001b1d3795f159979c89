@@ -1,0 +1,55 @@
+package com.wellsfargo.fsd.cms.test;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+import javax.validation.constraints.AssertTrue;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import com.wellsfargo.fsd.cms.dao.ContactRepositry;
+import com.wellsfargo.fsd.cms.entity.Contact;
+
+@DataJpaTest
+public class ContactDaoTest {
+	
+	@Autowired
+	private ContactRepositry contactRepo;
+	@Autowired
+	private TestEntityManager entityManager;
+	
+	private Contact[] testData;
+	
+	public void setUp() {
+		testData=new Contact[] {
+				new Contact(101,"Amirs",LocalDate.of(1998,Month.APRIL, 11),"9876543212","FAMILY",true),
+				new Contact(102,"Amir Toy",LocalDate.of(1998,Month.APRIL, 10),"9876543210","GYM",false),
+				new Contact(101,"Amir Hoj",LocalDate.of(1998,Month.APRIL, 12),"9876543214","HELPERS",true)
+		};
+		for(Contact c:testData) {
+			entityManager.persistAndFlush(c);
+		}
+	}
+	
+	@AfterEach
+	public void tearDown() {
+		for(Contact c:testData) {
+			entityManager.remove(c);
+		}
+		entityManager.flush();
+		testData=null;
+		
+	}
+	
+	@Test
+	public void whenExistsByMobile_givenExistingMobileNumber_shouldReturnTrue() {
+		AssertTrue(contactRepo.existsByMobile(testData[0].getMobile()));
+		
+	}
+
+
+}

@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>Spring Boot-Home </title>
+	</head>
+	<body>
+		<jsp:include page="/header"/>
+	
+		<h1>Welcome Home 123</h1>
+	</body>
+
+
+</html>

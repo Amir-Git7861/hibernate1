@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<beans xmlns="http://www.springframework.org/schema/beans"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="gsb" class="com.wellsfargo.scd.service.GreetServiceImpl"/>
+		<bean id="gsab" class="com.wellsfargo.scd.service.GreetServiceAdvancedImpl">
+		
+		<!-- Constructor Injection -->
+		<!-- -<constructor-arg index="0" value="Namastey!"/> -->
+		
+		<!-- setter Injection -->
+		<property name="greeting" value="Okay!"/>	
+		
+		
+		
+		</bean>
+		
+		
+
+</beans>

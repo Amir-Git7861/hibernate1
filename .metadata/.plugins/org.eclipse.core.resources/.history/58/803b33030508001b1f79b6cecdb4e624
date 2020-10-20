@@ -1,0 +1,35 @@
+package com.wellsfargo.fsd.cms.controller;
+
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DefaultController {
+	
+	@GetMapping({"","/","/home"})
+	public String showHome() {
+		return "index";
+	}
+	
+	@GetMapping("/login")
+	public String gotoLogin() {
+		String view="loginPage";
+		
+		Authentication auth=SecurityContextHolder.getContext().getAuthentication();
+		
+		if((auth instanceof AnonymousAuthenticationToken)&& auth.isAuthenticated()) {
+			view="redirect:/home";
+		}
+		return view;
+	}
+	
+	@RequestMapping("/header")
+	public String showHeader() {
+		return "header";
+	}
+
+}

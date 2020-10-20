@@ -1,0 +1,66 @@
+package com.wellsfargo.fsd.cms.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.wellsfargo.fsd.cms.service.ContactService;
+import com.wellsfargo.fsd.cms.service.ContactServiceImpl;
+
+
+@WebServlet({"/list","/newContact","/addContact","/deleteContact","/editContact","/saveContact"})
+public class cmsFrontController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	private ContactService contactService;
+       
+    
+	@Override
+	public void init() throws ServletException {
+		contactService=new ContactServiceImpl(); 
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+	
+	private String doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String view="";
+		return view;
+		
+	}
+	
+	private String doNewContact(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String view="";
+		return view;
+		
+	}
+	private String doEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String view="";
+		return view;
+		
+	}
+	private String doAddorSaveContact(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String view="";
+		return view;
+		
+	}
+	private String doDeleteContact(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String view="";
+		return view;
+		
+	}
+
+}

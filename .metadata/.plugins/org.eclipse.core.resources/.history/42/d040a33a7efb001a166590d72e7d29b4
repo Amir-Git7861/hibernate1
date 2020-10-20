@@ -1,0 +1,25 @@
+package com.wellsfargo.jpahd.ui;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import com.wellsfargo.jpahd.entity.Employee;
+
+public class EmployeeApp3JPQL {
+
+	public static void main(String[] args) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("mysqlPU");
+		EntityManager em=emf.createEntityManager();
+		
+		String qryText="SELECT e FROM EMPLOYEE e"; //JPQL
+		
+		TypedQuery<Employee> empQry=em.createQuery(qryText,Employee.class);
+		List<Employee> emps=empQry.getResultList();
+
+	}
+
+}

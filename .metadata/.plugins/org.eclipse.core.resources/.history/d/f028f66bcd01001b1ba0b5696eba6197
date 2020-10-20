@@ -1,0 +1,15 @@
+package com.wellsfargo.fsd.swbd.service;
+
+import com.wellsfargo.fsd.swbd.model.Item;
+
+public class ItemServiceImpl implements ItemService {
+
+	@Override
+	public void ComputeGSTandSellinPrice(Item item) {
+		switch(item.getCategory()) {
+		case:"ORNIMANT":item.setGst(.25) break;
+		}
+
+	}
+
+}

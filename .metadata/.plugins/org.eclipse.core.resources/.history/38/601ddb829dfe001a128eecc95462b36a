@@ -1,0 +1,11 @@
+package com.wellsfargo.scd.conf;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan({"com.wellsfargo.scd.service","com.wellsfargo.scd.util"})
+
+public class MyConf {
+
+}

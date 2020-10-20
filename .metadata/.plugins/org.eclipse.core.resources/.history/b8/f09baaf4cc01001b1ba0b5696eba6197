@@ -1,0 +1,7 @@
+package com.wellsfargo.fsd.swbd.service;
+
+public interface ItemService {
+	
+	voidComputeGSTandSellinPrice(Item item);
+
+}

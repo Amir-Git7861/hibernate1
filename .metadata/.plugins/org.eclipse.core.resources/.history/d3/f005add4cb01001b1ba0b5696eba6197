@@ -1,0 +1,18 @@
+package com.wellsfargo.fsd.swbd.model;
+
+public class Item {
+	
+	private int icode;
+	private String name;
+	private String category;
+	private double costPrice;
+	private double gst;
+	private double sellingPrice;
+	
+	public int getIcode() {
+		return icode;
+		
+	}
+	
+
+}

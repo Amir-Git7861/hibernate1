@@ -1,0 +1,14 @@
+package com.wellsfargo.fsd.jw.model;
+
+import java.time.LocalDate;
+
+public class VisitorsModel {
+	
+	private String title;
+	private String FullName;
+	private LocalDate dateOfBirth;
+	private int age;
+	
+	
+
+}

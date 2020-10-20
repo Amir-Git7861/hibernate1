@@ -1,0 +1,14 @@
+server.port=7777
+
+spring.mvc.view.prefix=/pages/
+spring.mvc.view.suffix=.jsp
+
+#db config
+spring.datasource.url=jdbc:h2:mem:test
+spring.datasource.driver-class-name=org.h2.Driver
+#Spring data
+spring.datasource.username=root
+spring.datasource.password=Amir@7861
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialec.Dialect

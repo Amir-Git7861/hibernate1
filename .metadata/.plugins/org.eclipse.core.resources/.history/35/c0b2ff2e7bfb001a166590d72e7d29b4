@@ -1,0 +1,16 @@
+package com.wellsfargo.jpahd.ui;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class EmployeeApp2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		EntityManagerFactory=Persistence.createEntityManagerFactory("mysqlPU");
+
+	}
+
+}

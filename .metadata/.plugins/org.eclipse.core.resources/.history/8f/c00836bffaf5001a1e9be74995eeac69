@@ -1,0 +1,10 @@
+package com.wellsfargo.fsd.td.service;
+
+public class NumericOperations {
+	
+	public boolean isOdd(int number) {
+		return number%2==1;
+		
+	}
+
+}

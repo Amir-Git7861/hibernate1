@@ -1,0 +1,8 @@
+package com.wellsfargo.fsd.cms.ui;
+
+public enum Menu {
+	ADD,FIND,lIST,DELETE,QUITE;
+
+	
+
+}

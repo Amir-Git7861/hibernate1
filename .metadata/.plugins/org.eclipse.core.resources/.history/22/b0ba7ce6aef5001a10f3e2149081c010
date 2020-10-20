@@ -1,0 +1,81 @@
+package com.wellsfargo.fsd.cms.ui;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.wellsfargo.fsd.cms.entity.Contact;
+import com.wellsfargo.fsd.cms.exception.ContactException;
+import com.wellsfargo.fsd.cms.service.ContactService;
+
+public class CMSApplication {
+	
+	public static final ContactService contactService=new ContactService() {
+		
+		public final Scanner scanner=new Scanner(System.in);
+			
+		
+		
+		@Override
+		public Contact validateAndSave(Contact contact) throws ContactException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Contact validateAndAdd(Contact contact) throws ContactException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Contact getContact(int contactId) throws ContactException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public Contact getContact(Contact contact) throws ContactException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public List<Contact> getAllContacts() throws ContactException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+		@Override
+		public boolean deleteContact(int contactId) throws ContactException {
+			// TODO Auto-generated method stub
+			return false;
+		}
+	};
+	
+	public static void doAdd() {
+		
+	}
+	public static void doDelete() {
+		
+	}
+	public static void doFind() {
+	
+}
+	public static void doList() {
+	
+}
+
+	public static void main(String[] args) {
+		
+		Menu[] menus=Menu.values();
+		Menu selectedMenu=null;
+		
+		while(selectedMenu!=Menu.QUITE) {
+			
+		}
+	 scanner.close();
+		
+
+	}
+
+}

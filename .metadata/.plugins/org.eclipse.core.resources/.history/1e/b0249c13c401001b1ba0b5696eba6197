@@ -1,0 +1,6 @@
+<header>
+	<h3>${today}</h3>
+	<h2>${title }</h2>
+
+
+</header>

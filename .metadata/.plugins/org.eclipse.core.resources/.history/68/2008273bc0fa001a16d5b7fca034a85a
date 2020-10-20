@@ -1,0 +1,22 @@
+package com.wellsfargo.jpahd.ui;
+
+import java.time.LocalDate;
+
+import com.wellsfargo.jpahd.entity.Employee;
+
+public class EmployeeApp {
+	
+	
+	public static void main(String[] args) {
+		
+		Employee[] emps=new Employee[] {
+				new Employee(101L,"Amir","Sohel",25000.0,LocalDate.now()),
+				new Employee(102L,"Sammer","Vats",35000.0,LocalDate.now()),
+				new Employee(101L,"Shekhar","Khanna",55000.0,LocalDate.now()),
+				new Employee(101L,"Sumit","Shaw",45000.0,LocalDate.now()),
+				new Employee(101L,"Ausaf","Shamin",75000.0,LocalDate.now()),
+				
+		};
+	}
+
+}

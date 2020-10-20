@@ -1,0 +1,54 @@
+package com.wellsfargo.fsd.td.testing;
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import com.wellsfargo.fsd.td.service.NumericOperations;
+
+public class NumericOperationTest {
+	
+	@DisplayName("testing is Odd method")
+	@Disabled
+	@Test
+	void isOddTest() {
+		NumericOperations numOpt=new NumericOperations();
+		
+		assertTrue(numOpt.isOdd(-9));
+		assertFalse(numOpt.isOdd(-8));
+		
+		assertFalse(numOpt.isOdd(0));
+		
+		assertTrue(numOpt.isOdd(9));
+		assertFalse(numOpt.isOdd(8));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(ints = {-9,9})
+	@DisplayName("testing is Odd method using params for ODDS")
+	@Test
+	void isOddTest2(int testdata) {
+		NumericOperations numOpt=new NumericOperations();
+		
+		assertTrue(numOpt.isOdd(testdata),testdata + "is expected to be odd but failed");
+		
+	}	
+	@ParameterizedTest
+	@ValueSource(ints = {-8,0,8})
+	@DisplayName("testing is Odd method using params for EVENS")
+	@Test
+	void isOddTest3(int testdata) {
+		NumericOperations numOpt=new NumericOperations();
+		
+		assertFalse(numOpt.isOdd(testdata),testdata + "is expected to be even but failed");
+		
+	}	
+
+}

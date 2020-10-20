@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Visitor Page</title>
+</head>
+<body>
+	<h1>Visitor Page</h1>
+	<nav>
+		<a href="Index.jsp">Home</a>
+	</nav>
+	
+		<form action="vs">
+		<label>Title:
+				<select name="title" required="required">
+				<option value="">---SELECT---</option>
+				<option value="Mr.">Mr.</option>
+				<option value="Miss.">Miss.</option>
+				<option value="Mrs.">Mrs.</option>
+				<option value="Dr.">Doctor</option>
+				
+				
+				</select>
+				
+				</label>
+		</form>
+
+</body>
+</html>

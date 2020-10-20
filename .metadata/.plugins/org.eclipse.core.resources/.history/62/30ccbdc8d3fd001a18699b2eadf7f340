@@ -1,0 +1,18 @@
+package com.wellsfargo.scd.service;
+
+public class GreetServiceAdvancedImpl implements GreetService {
+	
+	private String greeting;
+
+	public String doGreet(String username) {
+		
+		return greeting + " " +username;
+	}
+	public GreetServiceAdvancedImpl() {
+		
+	}
+
+	public GreetServiceAdvancedImpl(String greeting) {
+		
+	}
+}

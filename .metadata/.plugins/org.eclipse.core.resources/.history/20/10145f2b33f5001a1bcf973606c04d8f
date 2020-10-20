@@ -1,0 +1,8 @@
+CREATE DATABASE cmsDB;
+
+CREATE TABLE Contacts(
+	cid int primary key,
+	cname varchar(20) not null,
+	dob date not nul,
+	mobile char(10) unique
+);

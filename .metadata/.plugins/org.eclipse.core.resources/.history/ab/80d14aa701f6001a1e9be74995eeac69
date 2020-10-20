@@ -1,0 +1,64 @@
+package com.wellsfargo.fsd.td.testing;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import com.wellsfargo.fsd.td.service.NumericOperations;
+
+public class NumericOperationTest {
+	
+	NumericOperationTest numOpt;
+	@BeforeEach
+	void init() {
+		numOpt=new NumericOperationTest();
+	}
+	@AfterEach
+	void clean() {
+		numOpt=null;
+	}
+	
+	@DisplayName("testing is Odd method")
+	@Disabled
+	@Test
+	void isOddTest() {
+		assertTrue(numOpt.isOdd(-9));
+		assertFalse(numOpt.isOdd(-8));
+		
+		assertFalse(numOpt.isOdd(0));
+		
+		assertTrue(numOpt.isOdd(9));
+		assertFalse(numOpt.isOdd(8));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(ints = {-9,9})
+	@DisplayName("testing is Odd method using params for ODDS")
+	void isOddTest2(int testdata) {
+		assertTrue(numOpt.isOdd(testdata),testdata + "is expected to be odd but failed");
+		
+	}	
+	@ParameterizedTest
+	@ValueSource(ints = {-8,0,8})
+	@DisplayName("testing is Odd method using params for EVENS")
+	
+	void isOddTest3(int testdata) {
+		assertFalse(numOpt.isOdd(testdata),testdata + "is expected to be even but failed");
+		
+	}	
+	@ParameterizedTest
+	@CsvSource(value = {"-9,-9,-9","-9,0,0","-9,9,9","9,-9,9","0,9,9","9,0,9"})
+	void maxTest(int testdata1,int testdata2,int expected) {
+		
+		assertEquals(expected, numOpt.max(testdata1, testdata2));
+	}
+
+}

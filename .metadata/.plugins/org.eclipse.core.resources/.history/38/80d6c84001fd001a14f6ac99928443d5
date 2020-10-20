@@ -1,0 +1,16 @@
+package com.wellsfargo.jpahd.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+
+public class Address implements Serializable{
+	
+	@Column(name = "dno", nullable = false)
+	private String doorNumber;
+	@Column(name = "street", nullable = false)
+	private String street;
+	@Column(name = "city", nullable = false)
+	private String city;
+
+}

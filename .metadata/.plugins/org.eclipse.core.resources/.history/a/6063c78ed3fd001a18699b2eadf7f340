@@ -1,0 +1,5 @@
+package com.wellsfargo.scd.service;
+
+public class GreetServiceAdvancedImpl implements GreetService {
+
+}

@@ -1,0 +1,9 @@
+package com.wellsfargo.fsd.swbd.service;
+
+public class GreetService {
+	
+	public String doGreet() {
+		
+	}
+
+}

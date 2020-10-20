@@ -1,0 +1,29 @@
+package com.wellsfargo.fsd.td.testing;
+
+
+
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.wellsfargo.fsd.td.service.NumericOperations;
+
+public class NumericOperationTest {
+	
+	@Test
+	void isOddTest() {
+		NumericOperations numOpt=new NumericOperations();
+		
+		assertTrue(numOpt.isOdd(-9));
+		assertFalse(numOpt.isOdd(-8));
+		
+		assertFalse(numOpt.isOdd(0));
+		
+		assertTrue(numOpt.isOdd(9));
+		assertFalse(numOpt.isOdd(8));
+	}
+
+	
+
+}

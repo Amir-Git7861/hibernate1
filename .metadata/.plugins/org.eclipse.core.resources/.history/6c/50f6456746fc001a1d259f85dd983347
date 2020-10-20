@@ -1,0 +1,17 @@
+package com.wellsfargo.jpahd.ui;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class RetriveUi {
+	public static void main(String args[]) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("mysqlPU");
+		EntityManager em=emf.createEntityManager();
+		 
+		final String eQry="SELECT e FROM Employee e";
+		final String mQry="SELECT m FROM Manager m";
+		final String ceQry="SELECT e FROM ContractEmployee e";
+	}
+
+}

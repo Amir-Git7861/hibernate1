@@ -1,0 +1,13 @@
+<Context>
+		<Resource
+			name="jdbc/MYDB"
+			type="javax.sql.DataSource"
+			maxActive="100"
+			maxIdle="30"
+			maxWait="10000"
+			username="root"
+			password="Amir@7861"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://localhost:3306/cmsDB"/>
+		
+</Context>

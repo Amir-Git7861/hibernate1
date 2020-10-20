@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CMS</title>
+</head>
+<body>
+	<jsp:include page="header.jsp"></jsp:include>
+	
+	<h3>${isNew?"New Contact":"Edit Contact"}</h3>
+		<form action='${isNew?"addContact":"saveContact" }' method="POST">
+		<div>
+			<label>Contact Id</label>
+			<input type="number" name="contactId" value="${contact.contactId }" ${isNew?"":"readonly"} required />
+       </div>
+		<div>
+			<label>Full Name</label>
+			<input type="text" name="fullName" value="${contact.fullName }" required />
+		</div>
+		<div>
+			<label>Date Of Birth</label>
+			<input type="date" name="dateOfBirth" value="${contact.dateOfBirth }" required />
+		</div>
+		<div>
+			<label>Mobile</label>
+			<input type="text" name="mobile" value="${contact.mobile }" pattern="[1-9][0-9]{9}" required />
+		</div>
+		<button>SAVE</button>
+	</form>
+</body>
+</html>

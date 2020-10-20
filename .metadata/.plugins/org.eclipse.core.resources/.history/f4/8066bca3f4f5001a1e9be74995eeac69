@@ -1,0 +1,13 @@
+package com.wellsfargo.fsd.td.testing;
+import org.junit.jupitar.api.Test;
+
+import com.wellsfargo.fsd.td.service.NumericOperations;
+
+public class NumericOperationTest {
+	void isOddTest() {
+		
+		NumericOperationTest numOpt=new NumericOperationTest();
+		
+	}
+
+}

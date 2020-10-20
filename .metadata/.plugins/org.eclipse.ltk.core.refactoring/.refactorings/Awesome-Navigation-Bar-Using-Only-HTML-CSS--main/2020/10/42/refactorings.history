@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;style.css&apos; to &apos;static&apos;&#x0D;&#x0A;- Original project: &apos;Awesome-Navigation-Bar-Using-Only-HTML-CSS--main&apos;&#x0D;&#x0A;- Destination element: &apos;static&apos;&#x0D;&#x0A;- Original element: &apos;style.css&apos;" description="Copy file" element1="navbar/style.css" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1602620992793" target="/cms-spring-web-data-bootstrap-Thymleaf/src/main/resources/static" units="0" version="1.0"/>
+</session>

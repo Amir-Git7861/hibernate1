@@ -1,0 +1,45 @@
+package com.wellsfargo.fsd.cms.ui;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.wellsfargo.fsd.cms.entity.Contact;
+import com.wellsfargo.fsd.cms.exception.ContactException;
+import com.wellsfargo.fsd.cms.service.ContactService;
+
+public class CMSApplication {
+	
+	public static final ContactService contactService=new ContactServiceImpl();
+		
+		public final Scanner scanner=new Scanner(System.in);
+			
+		
+	
+	
+	public static void doAdd() {
+		
+	}
+	public static void doDelete() {
+		
+	}
+	public static void doFind() {
+	
+}
+	public static void doList() {
+	
+}
+
+	public static void main(String[] args) {
+		
+		Menu[] menus=Menu.values();
+		Menu selectedMenu=null;
+		
+		while(selectedMenu!=Menu.QUITE) {
+			
+		}
+	 scanner.close();
+		
+
+	}
+
+}

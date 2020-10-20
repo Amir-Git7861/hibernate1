@@ -1,0 +1,22 @@
+package com.wellsfargo.scd.ui;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.wellsfargo.scd.service.GreetService;
+import com.wellsfargo.scd.service.GreetServiceImpl;
+
+public class GreetApp1 {
+
+	public static void main(String[] args) {
+//		
+//		GreetService gs=new GreetServiceImpl();
+//		System.out.println(gs.doGreet("Amir"));
+		
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+		GreetService gs=(GreetService) context.getBean("gsd");
+		System.out.println(gs.doGreet("Amir"));
+
+	}
+
+}

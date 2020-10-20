@@ -1,0 +1,24 @@
+package com.wellsfargo.fsd.cms;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.wellsfargo.fsd.cms.entity.Contact;
+
+@Ena
+public interface ContactRepositry  extends JpaRepository<Contact, Integer>{
+	
+
+	
+	@Query("SELECT c FROM Contact c WHERE CONCAT(c.contactId, ' ', c.fullName, ' ', c.dateOfBirth, ' ', c.mobile) LIKE %?1%")
+	public List<Contact> search(String keyword);
+	
+//	@Query("SELECT c  FROM Contacts c WHERE c.dateOfBirth BETWEEN : start and :end")
+//	
+//	List<Contact> findAllBornInRange(@DateTimeFormat(iso=ISO.DATE) LocalDate start,@DateTimeFormat(iso=ISO.DATE) LocalDate end);
+//	
+
+}

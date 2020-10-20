@@ -1,0 +1,51 @@
+package com.wellsfargo.jpahd.ui;
+
+import java.time.LocalDate;
+import java.util.TreeSet;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.wellsfargo.jpahd.entity.ContactEmployee;
+import com.wellsfargo.jpahd.entity.Department;
+import com.wellsfargo.jpahd.entity.Employee;
+import com.wellsfargo.jpahd.entity.Manager;
+
+public class EmployeeApp {
+	
+	
+	public static void main(String[] args) {
+		
+		Department d1=new Department(null,"Accounts");
+		Department d2=new Department(null,"Sales");
+		
+		d1.setEmployees(new TreeSet<Employee>());
+		d1.getEmployees().add(new Employee(101L,"Amir","Sohel",25000.0,LocalDate.now()),
+				new Address(102L,"Sammer","Vats",35000.0,LocalDate.now(),888.0),
+				new BankAccount(103L,"Shekhar","Khanna",55000.0,LocalDate.now())
+		
+		
+		
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("mysqlPU");
+		EntityManager em=emf.createEntityManager();
+		
+		EntityTransaction txn=em.getTransaction();
+		txn.begin();
+		
+		em.persist(emp);
+		em.persist(mgr);
+		em.persist(cemp);
+		
+//		for(Employee emp:emps) {
+//			em.persist(emp);
+//			System.out.println("Employee is saved");
+//		}
+//		
+		txn.commit();
+		System.out.println("Data Saved");
+		em.close();
+	}
+
+}

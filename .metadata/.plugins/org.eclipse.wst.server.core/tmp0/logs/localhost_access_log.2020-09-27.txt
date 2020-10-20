@@ -1,0 +1,13 @@
+127.0.0.1 - - [27/Sep/2020:23:39:41 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:39:42 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:39:42 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:42:30 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:42:30 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:42:33 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 404 682
+127.0.0.1 - - [27/Sep/2020:23:42:54 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:42:55 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 404 682
+127.0.0.1 - - [27/Sep/2020:23:45:33 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:45:38 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 200 116
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:47:58 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 200 127
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:48:10 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 200 116
+0:0:0:0:0:0:0:1 - - [27/Sep/2020:23:48:12 +0530] "GET /SpringWebMvcExample/ HTTP/1.1" 200 116

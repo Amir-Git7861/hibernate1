@@ -1,0 +1,5 @@
+package com.wellsfargo.scd.util;
+
+public class GreetingsProvider {
+
+}

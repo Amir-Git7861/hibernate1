@@ -1,0 +1,13 @@
+package com.wellsfargo.fsd.swbd.controller;
+
+import org.springframework.stereotype.Controller;
+
+public class WelcomeController {
+	
+	@Controller
+	public String showHome() {
+		return "index";
+		
+	}
+
+}

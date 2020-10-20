@@ -1,0 +1,5 @@
+package com.wellsfargo.fsd.jw.model;
+
+public class VisitorsModel {
+
+}
