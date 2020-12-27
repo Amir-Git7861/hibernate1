@@ -1,9 +1,6 @@
 package com.wellsfargo.jpahd.entity;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -12,33 +9,38 @@ import javax.persistence.Table;
 //@Table(name = "emps_C")
  @Table(name = "emps_c_only")
 
-public class ContactEmployee extends Employee {
+public class RegularEmployee extends Employee {
 	
 	
 	
-	@Column(name = "cDur")
-	private Integer contractDuration;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Column(name = "qplc")
+	private Integer qplc;
 	
-	public ContactEmployee() {
+	public RegularEmployee() {
 		
 	}
 
-	public ContactEmployee(Long empNo, String firstName, String lastName, Double basic, LocalDate joinDate, 
-			               Integer contractDuration) {
-		super(empNo, firstName, lastName, basic, joinDate);
-		this.contractDuration=contractDuration;
+	
+	public RegularEmployee(Long employeeID, String employeeName, Double employeeSalary,Integer qplc) {
+		super(employeeID, employeeName, employeeSalary);
+		this.qplc=qplc;
+		// TODO Auto-generated constructor stub
 	}
 
-	public Integer getContractDuration() {
-		return contractDuration;
+
+	public Integer getQplc() {
+		return qplc;
 	}
 
-	public void setContractDuration(Integer contractDuration) {
-		this.contractDuration = contractDuration;
+	public void setQplc(Integer qplc) {
+		this.qplc = qplc;
 	}
-	
-}
-	
+
+ }
 	
 	
 	

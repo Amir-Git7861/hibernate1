@@ -110,6 +110,7 @@ public class ContactDaoJdbcImpl implements ContactDao{
 				contact.setDateOfBirth(rs.getDate(3).toLocalDate());
 				contact.setMobile(rs.getString(4));
 				
+				
 			}
 			
 			
@@ -139,17 +140,17 @@ public class ContactDaoJdbcImpl implements ContactDao{
 				contact.setFullName(rs.getString(2));
 				contact.setDateOfBirth(rs.getDate(3).toLocalDate());
 				contact.setMobile(rs.getString(4));
+				System.out.println(contact);
 				
 				contacts.add(contact);
+				System.out.println(contact);
 				
 			}
 			if(contacts.isEmpty()) {
 				contacts= null;
 			}
-			
-			
-			
-			}catch(SQLException exp) {
+		
+		}catch(SQLException exp) {
 			throw new ContactException("Fetching Contact failed");
 		}
 	

@@ -5,10 +5,11 @@
 <title>Create New Product</title>
 </head>
 <body>
-	<div align="center">	
+	<div align="center">
 		<h1>Create New Contact</h1>
-		<br/>
-		<form action="#" th:action="@{/save}" th:object="${contacts}" method="post">
+		<br />
+		<form action="#" th:action="@{/save}" method="POST"
+			th:object="${contact}">
 			<table border="0" cellpadding="10">
 				<tr>
 					<td>Full Name:</td>
@@ -17,15 +18,15 @@
 				<tr>
 					<td>DOB:</td>
 					<td><input type="text" th:field="*{dateOfBirth}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td>Mobile:</td>
 					<td><input type="text" th:field="*{mobile}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td>Married:</td>
 					<td><input type="text" th:field="*{married}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td colspan="2"><button type="submit">Save</button></td>
 				</tr>

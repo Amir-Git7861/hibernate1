@@ -48,22 +48,18 @@ public class Employee implements Serializable  {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="eno")
-	private Long empNo;
+	@Column(name="empId")
+	private Long employeeID;
 	
-	@Column(name="fnm",nullable=false)
-	private String firstName;
+	@Column(name="empName",nullable=false)
+	private String employeeName;
 	
-	@Column(name="lnm",nullable=false)
-	private String lastName;
 	
 
-	@Column(name="basic",nullable=false)
-	private Double basic;
+	@Column(name="empSal",nullable=false)
+	private Double employeeSalary;
 	
 
-	@Column(name="doj",nullable=false)
-	private LocalDate joinDate;
 	
 	
 	public  Employee() {
@@ -73,62 +69,60 @@ public class Employee implements Serializable  {
 	}
 
 
-	public Employee(Long empNo, String firstName, String lastName, Double basic, LocalDate joinDate) {
-		super();
-		this.empNo = empNo;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.basic = basic;
-		this.joinDate = joinDate;
-		
-}
-
-
-	public Long getEmpNo() {
-		return empNo;
-	}
-
-
-	public void setEmpNo(Long empNo) {
-		this.empNo = empNo;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-
-	public void setFirstName( String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-
-	public Double getBasic() {
-		return basic;
-	}
-
-
-	public void setBasic(Double basic) {
-		this.basic = basic;
-	}
-
-
-	public LocalDate getJoinDate() {
-		return joinDate;
-	}
-
-
-	public void setJoinDate(LocalDate joinDate) {
-		this.joinDate = joinDate;
-	}
 	
+
+	public Employee(Long employeeID, String employeeName, Double employeeSalary) {
+		super();
+		this.employeeID = employeeID;
+		this.employeeName = employeeName;
+		this.employeeSalary = employeeSalary;
+	}
+
+
+
+
+	public Long getEmployeeID() {
+		return employeeID;
+	}
+
+
+
+
+	public void setEmployeeID(Long employeeID) {
+		this.employeeID = employeeID;
+	}
+
+
+
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+
+
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+
+
+
+	public Double getEmployeeSalary() {
+		return employeeSalary;
+	}
+
+
+
+
+	public void setEmployeeSalary(Double employeeSalary) {
+		this.employeeSalary = employeeSalary;
+	}
+
+
+
+
+	
+
 }

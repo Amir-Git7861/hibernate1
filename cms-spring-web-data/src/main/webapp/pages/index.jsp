@@ -10,7 +10,7 @@
 
 </head>
 <body>
-	<jsp:include page="/header"/>
+	<jsp:include page="header.jsp"/>
 	<c:if test="${msg !=null}">
 	<p><strong>${msg}</strong>
 	

@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8088" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -153,10 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="E:\NewWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\NewWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ContactManagementPortal" path="/ContactManagementPortal" reloadable="true" source="org.eclipse.jst.jee.server:ContactManagementPortal">
-		<Resource driverClassName="com.mysql.jdbc.Driver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/MYDB" password="Amir@7861" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/cmsDB" username="root"/>
-		
-</Context></Host>
+      <Context docBase="E:\NewWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\NewWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\springboot-backend1" path="/springboot-backend1" reloadable="true" source="org.eclipse.jst.jee.server:springboot-backend1"/></Host>
     </Engine>
   </Service>
 </Server>

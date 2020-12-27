@@ -15,7 +15,7 @@
 	<name>ContactManager</name>
 	<description>Spring Boot CRUD Web App Example</description>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<java.version>14</java.version>
 	</properties>
@@ -36,12 +36,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>	
+
+		</dependency>
 		<dependency>
-    	<groupId>org.apache.tomcat.embed</groupId>
-   	    <artifactId>tomcat-embed-jasper</artifactId>
-    	
-	</dependency>	
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

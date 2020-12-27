@@ -31,14 +31,17 @@ public class ContactController {
 	
 	@RequestMapping("/new")
 	public String showNewContactForm(Model model) {
+		System.out.println("GGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
 		Contact contact = new Contact();
-		model.addAttribute("contacts", contact);
+		System.out.println("GGGGGGGGGGGGGGGGGGGGGGGGGGGGG1");
+		model.addAttribute("contact", contact);
+		System.out.println("GGGGGGGGGGGGGGGGGGGGGGGGGGGGG2");
 		
 		return "new_contact";
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveProduct(@ModelAttribute("contact") Contact contact) {
+	public String saveContact(@ModelAttribute("contact") Contact contact) {
 		service.save(contact);
 		
 		return "redirect:/";

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html>
@@ -15,7 +14,7 @@
 
 </head>
 <body>
-	<jsp:include page="/header"/>
+	<jsp:include page="header.jsp">
 	<section class="container-fluid p-4">
 	<div class="jumbotron">
 		<h2>Contact Management System

@@ -7,13 +7,14 @@
 <body>
 	<div align="center">
 		<h1>Edit Contact</h1>
-		<br/>
-		<form action="#" th:action="@{/save}" th:object="${contact}" method="post">
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${contact}"
+			method="post">
 			<table border="0" cellpadding="10">
 				<tr>
 					<td>Contact ID:</td>
 					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
-				</tr>			
+				</tr>
 				<tr>
 					<td>Full Name:</td>
 					<td><input type="text" th:field="*{fullName}" /></td>
@@ -21,15 +22,15 @@
 				<tr>
 					<td>DOB:</td>
 					<td><input type="text" th:field="*{dateOfBirth}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td>Mobile:</td>
 					<td><input type="text" th:field="*{mobile}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td>Married:</td>
 					<td><input type="text" th:field="*{married}" /></td>
-				</tr>				
+				</tr>
 				<tr>
 					<td colspan="2"><button type="submit">Save</button></td>
 				</tr>

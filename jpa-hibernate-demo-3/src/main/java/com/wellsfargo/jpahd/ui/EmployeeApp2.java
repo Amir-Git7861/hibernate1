@@ -26,7 +26,7 @@ public class EmployeeApp2 {
 			
 			Employee emp=em.find(Employee.class, empId);
 			if(emp!=null) {
-				System.out.println(emp.getFirstName() + " " +emp.getLastName());
+				System.out.println(emp.getEmployeeName() + " " +emp.getEmployeeSalary());
 			} else {
 				System.out.println("Emp Not Found");
 			}

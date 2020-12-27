@@ -7,7 +7,7 @@
 <title>CMS</title>
 </head>
 <body>
-	<jsp:include page="/header"/>
+	<jsp:include page="header.jsp"/>
 	<h3>Err:${errMsg}</h3>
 	<p>Inconvenience Regretted !
 			Contact Admin if the problem persist !

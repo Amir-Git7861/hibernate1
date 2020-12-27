@@ -14,7 +14,7 @@
 
 </head>
 <body>
-	<jsp:include page="/header"/>
+	<jsp:include page="header.jsp">
 	
 	<section class="container fluid p-4">
 		<div class="card card-primary">

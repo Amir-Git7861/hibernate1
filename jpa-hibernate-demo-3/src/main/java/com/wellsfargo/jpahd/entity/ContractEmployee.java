@@ -1,9 +1,6 @@
 package com.wellsfargo.jpahd.entity;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -12,7 +9,7 @@ import javax.persistence.Table;
 //@Table(name = "emps_m")
 @Table(name = "emps_m_only")
 
-public class Manager extends Employee {
+public class ContractEmployee extends Employee {
        /**
 	 * 
 	 */
@@ -20,13 +17,14 @@ public class Manager extends Employee {
 	  @Column(name="alwnc")
        private Double allowence;
        
-       public Manager() {
+       public ContractEmployee() {
     	   
        }
 
-	public Manager(Long empNo, String firstName, String lastName, Double basic, LocalDate joinDate, Double allowence) {
-		super(empNo, firstName, lastName, basic, joinDate);
-		this.allowence=allowence;
+	public ContractEmployee(Long employeeID, String employeeName, Double employeeSalary, Double allownce) {
+		super(employeeID, employeeName, employeeSalary);
+		this.allowence=allownce;
+		// TODO Auto-generated constructor stub
 	}
 
 	public Double getAllowence() {
@@ -36,6 +34,7 @@ public class Manager extends Employee {
 	public void setAllowence(Double allowence) {
 		this.allowence = allowence;
 	}
+
 	
        
 }

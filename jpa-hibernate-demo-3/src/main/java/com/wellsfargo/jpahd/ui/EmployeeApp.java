@@ -1,15 +1,13 @@
 package com.wellsfargo.jpahd.ui;
 
-import java.time.LocalDate;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.wellsfargo.jpahd.entity.ContactEmployee;
+import com.wellsfargo.jpahd.entity.RegularEmployee;
+import com.wellsfargo.jpahd.entity.ContractEmployee;
 import com.wellsfargo.jpahd.entity.Employee;
-import com.wellsfargo.jpahd.entity.Manager;
 
 public class EmployeeApp {
 	
@@ -25,9 +23,9 @@ public class EmployeeApp {
 //				
 //		};
 		
-		Employee emp=new Employee(101L,"Amir","Sohel",25000.0,LocalDate.now());
-		Manager mgr=new Manager(102L,"Sammer","Vats",35000.0,LocalDate.now(),888.0);
-		ContactEmployee cemp=new ContactEmployee(103L,"Shekhar","Khanna",55000.0,LocalDate.now(),5);
+		Employee emp=new Employee(101L,"Nidhi",25000.0);
+		RegularEmployee mgr=new RegularEmployee(102L,"Amir",35000.0,1);
+		ContractEmployee cemp=new ContractEmployee(103L,"Singh",55000.0,90.0);
 		
 		EntityManagerFactory emf=Persistence.createEntityManagerFactory("mysqlPU");
 		EntityManager em=emf.createEntityManager();

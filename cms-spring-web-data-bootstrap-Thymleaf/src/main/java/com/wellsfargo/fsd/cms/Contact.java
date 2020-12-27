@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="contacts")
+@Table(name="contact")
 public class Contact {
 	
 	private Integer contactId;
@@ -21,19 +21,10 @@ public class Contact {
 	protected Contact() {
 		
 	}
-//
-//	public Contact(Integer contactId, String fullName, LocalDate dateOfBirth, String mobile) {
-//		super();
-//		this.contactId = contactId;
-//		this.fullName = fullName;
-//		this.dateOfBirth = dateOfBirth;
-//		this.mobile = mobile;
-//	}
-//	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
-	public Integer getContactId() {
+    public Integer getContactId() {
 		return contactId;
 	}
 

@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.wellsfargo.jpahd.entity.ContactEmployee;
+import com.wellsfargo.jpahd.entity.RegularEmployee;
 import com.wellsfargo.jpahd.entity.Employee;
-import com.wellsfargo.jpahd.entity.Manager;
+import com.wellsfargo.jpahd.entity.ContractEmployee;
 
 public class RetriveUi {
 	public static void main(String args[]) {
@@ -25,14 +25,14 @@ public class RetriveUi {
 		for(Employee e:emps) {
 			System.out.println(e.getFirstName());
 		}
-		List<Manager> mgrs=em.createQuery(mQry, Manager.class).getResultList();
+		List<ContractEmployee> mgrs=em.createQuery(mQry, ContractEmployee.class).getResultList();
 		
-		for(Manager m:mgrs) {
+		for(ContractEmployee m:mgrs) {
 			System.out.println(m.getFirstName());
 		}
-		List<ContactEmployee> cemps=em.createQuery(ceQry, ContactEmployee.class).getResultList();
+		List<RegularEmployee> cemps=em.createQuery(ceQry, RegularEmployee.class).getResultList();
 		
-		for(ContactEmployee e:cemps) {
+		for(RegularEmployee e:cemps) {
 			System.out.println(e.getFirstName());
 		}
 		em.close();

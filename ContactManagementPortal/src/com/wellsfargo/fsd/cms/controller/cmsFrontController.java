@@ -55,9 +55,11 @@ public class cmsFrontController extends HttpServlet {
 		
 		try {
 			List<Contact> contacts=contactService.getAllContacts();
-			request.setAttribute("contacts", contacts);
-			view="contactsPage.jsp";
 			
+			request.setAttribute("contacts", contacts);
+			
+			view="contactsPage.jsp";
+		
 		} catch (ContactException e) {
 			request.setAttribute("errMsg", e.getMessage());
 			view="errPage.jsp";
